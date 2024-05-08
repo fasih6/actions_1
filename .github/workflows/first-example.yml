@@ -8,15 +8,15 @@ jobs:
         steps:
         - name: checkout
           uses: actions/checkout@v4
-          
-        - name: welcome message 
-          run: echo "welcome to actions"
-        
-        - name: list files 
-          run: ls
 
-        - name: read file
-          run: cat README.md
+        - name: welcome message 
+          run: |
+            echo "welcome to actions"
+            ls -ltra
+            cat README.md
+        
+        - name: Generate ASCII artwork
+          run:  cowsay -f dragon "hello dosto" >> dragon.txt
 
 
 
